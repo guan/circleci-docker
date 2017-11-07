@@ -5,10 +5,9 @@ RUN sudo apt-get update \
  && sudo apt-get install -y --no-install-recommends \
         bzip2 \
         libfontconfig \
+        fonts-migmix \
  && sudo apt-get clean \
  && sudo rm -rf /var/lib/apt/lists/*
-
-RUN sudo apt-get install fonts-migmix
 
 RUN set -x  \
     # Install official PhantomJS release
