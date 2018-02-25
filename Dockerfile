@@ -18,4 +18,4 @@ RUN set -x  \
     # Clean up
  && sudo apt-get clean \
  && sudo rm -rf /tmp/* /var/lib/apt/lists/* \
- && npm install -g surge
+ && npm install -g surge gulp
