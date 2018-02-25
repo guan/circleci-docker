@@ -17,4 +17,5 @@ RUN set -x  \
  && sudo mv /tmp/phantomjs/bin/phantomjs /usr/local/bin \
     # Clean up
  && sudo apt-get clean \
- && sudo rm -rf /tmp/* /var/lib/apt/lists/*
+ && sudo rm -rf /tmp/* /var/lib/apt/lists/* \
+ && npm install surge
