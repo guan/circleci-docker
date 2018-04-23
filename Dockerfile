@@ -1,4 +1,4 @@
-FROM circleci/ruby:2.5.0-node
+FROM circleci/ruby:2.5.1-node
 
 # Install runtime dependencies
 RUN sudo apt-get update \
