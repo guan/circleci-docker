@@ -1,5 +1,7 @@
 FROM circleci/ruby:2.5.1-node
 
+ARG hub_version="2.2.9"
+
 # Install runtime dependencies
 RUN sudo apt-get update \
  && sudo apt-get install -y --no-install-recommends \
@@ -19,3 +21,8 @@ RUN set -x  \
  && sudo apt-get clean \
  && sudo rm -rf /tmp/* /var/lib/apt/lists/* \
  && sudo npm install -g surge gulp
+
+RUN sudo wget https://github.com/github/hub/releases/download/v${hub_version}/hub-linux-amd64-${hub_version}.tgz \
+ && sudo tar zxvf hub-linux-amd64-${hub_version}.tgz \
+ && sudo mv hub-linux-amd64-${hub_version}/bin/hub /usr/local/bin
+ 
