@@ -6,7 +6,7 @@ RUN sudo curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && sudo  py
 RUN sudo pip install awscli
 
 # serverless
-RUN sudo npm install -g serverless
+RUN sudo npm install -g serverless surge gulp
 
 
 
