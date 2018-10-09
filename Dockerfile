@@ -12,3 +12,5 @@ RUN sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select 
 RUN sudo apt-get install -y python2.7-dev
 RUN sudo curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && sudo  python get-pip.py
 RUN sudo pip install awscli
+
+RUN npm install -g surge gulp serverless yarn firebase-tools tslint typescript
