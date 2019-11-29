@@ -8,4 +8,6 @@ RUN npm install -g yarn
 RUN apt-get install -y rubygems
 RUN gem install hub
 
+RUN hub --version
+
 
