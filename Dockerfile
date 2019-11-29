@@ -1,8 +1,13 @@
-FROM google/cloud-sdk:alpine
+FROM google/cloud-sdk
 
-RUN apk add --update nodejs nodejs-npm libpng-dev
+RUN apt-get install -y nodejs npm libpng-dev
 
 # To handle 'not get uid/gid'
 RUN npm config set unsafe-perm true
 RUN npm install -g yarn
+
+RUN apt-get install -y rubygems
+RUN gem install hub
+
+# ENTRYPOINT [ "yarn" ]
 
