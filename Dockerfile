@@ -1,11 +1,11 @@
-FROM google/cloud-sdk
+FROM ruby:2.6.1-alpine
 
-RUN apt-get install -y nodejs npm libpng-dev
+RUN apk update && \
+    apk upgrade && \
+    apk add --no-cache \
+    bash \
+    curl-dev \
+    git 
 
-RUN npm config set unsafe-perm true
-RUN npm install -g yarn
-
-RUN apt-get install -y rubygems
-RUN gem install hub
 
 
