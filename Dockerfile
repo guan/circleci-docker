@@ -7,5 +7,6 @@ RUN apk update && \
     curl-dev \
     git 
 
+RUN gem install hub
 
 
